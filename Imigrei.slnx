@@ -7,6 +7,6 @@
     <Project Path="Imigrei.API/Imigrei.API.csproj" />
     <Project Path="Imigrei.Application/Imigrei.Application.csproj" />
     <Project Path="Imigrei.Infrastructure/Imigrei.Infrastructure.csproj" />
-    <Project Path="Imigrei/Imigrei.Domain.csproj" />
+    <Project Path="Imigrei.Domain/Imigrei.Domain.csproj" />
   </Folder>
 </Solution>
