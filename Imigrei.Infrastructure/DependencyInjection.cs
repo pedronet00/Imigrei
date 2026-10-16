@@ -1,6 +1,7 @@
 using Imigrei.Application.Interfaces;
 using Imigrei.Domain.Interfaces;
 using Imigrei.Infra.Data.Queries;
+using Imigrei.Infra.Relatorios;
 using Imigrei.Infra.Repositories;
 using Imigrei.Infra.Storage;
 using Imigrei.Infrastructure.Authentication;
@@ -33,6 +34,9 @@ public static class DependencyInjection
         services.AddScoped<IImigranteAcoesRepository, ImigranteAcoesRepository>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
         services.AddScoped<IDashboardQuery, DashboardQuery>();
+        services.AddScoped<IRelatoriosQuery, RelatoriosQuery>();
+        services.AddSingleton<IRelatorioExportador, RelatorioPdfExportador>();
+        services.AddSingleton<IRelatorioExportador, RelatorioExcelExportador>();
         services.Configure<StorageSettings>(configuration.GetSection(StorageSettings.SectionName));
         services.AddScoped<IArquivoStorage, ArquivoStorageLocal>();
 

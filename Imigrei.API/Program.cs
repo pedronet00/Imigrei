@@ -163,7 +163,8 @@ builder.Services.AddCors(options =>
 
         policy.AllowAnyMethod()
               .AllowAnyHeader()
-              .WithExposedHeaders("Retry-After");
+              // Content-Disposition: o front lê dele o nome dos arquivos baixados.
+              .WithExposedHeaders("Retry-After", "Content-Disposition");
     });
 });
 
