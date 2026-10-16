@@ -2,7 +2,6 @@
   <Folder Name="/src/">
     <File Path=".dockerignore" />
     <File Path=".env.example" />
-    <File Path="Caddyfile" />
     <File Path="docker-compose.yaml" />
     <File Path="Dockerfile" />
     <Project Path="Imigrei.API/Imigrei.API.csproj" />
